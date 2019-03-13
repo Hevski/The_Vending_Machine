@@ -9,12 +9,14 @@ describe('Vending Machine', function() {
       assert.equal(0, machine.getBalance())
     });
 
-    xit('should increase when money inserted', function() {
-
+    it('should increase when money inserted', function() {
+      machine = new VendingMachine();
+      machine.insertMoney(1)
+      assert.equal(1, machine.getBalance())
     });
 
     xit('should decrease when item purchased', function() {
-      
+
     })
   });
   describe('Vending machince stock', function() {
@@ -22,7 +24,8 @@ describe('Vending Machine', function() {
 
     });
     xit('should be able to add stock', function() {
-
+      // machine = new VendingMachine();
+      // machine.
     });
     xit('should remove stock item when customer purchases an item', function() {
 
