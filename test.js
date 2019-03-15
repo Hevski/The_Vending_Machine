@@ -20,18 +20,25 @@ describe('Vending Machine', function() {
     })
   });
   describe('Vending machince stock', function() {
-    xit('should start with no stock', function() {
 
+    it('should start with no stock', function() {
+      machine = new VendingMachine();
+      assert.deepStrictEqual([], machine.checkStock())
     });
-    xit('should be able to add stock', function() {
-      // machine = new VendingMachine();
-      // machine.
+
+    it('should be able to add stock', function() {
+      machine = new VendingMachine();
+      machine.service([{'A': 0.65}, {'B': 1}, {'C': 1.50}], [{'Nickel': 5}, {'Dime': 10}, {'Quarter': 10}, {'Dollar': 20}])
+      assert.equal(3, machine.stock.length)
     });
+
     xit('should remove stock item when customer purchases an item', function() {
 
     });
   });
+
   describe('Total Balance of vending machine', function() {
+
     xit('should increase total balance by item cost', function() {
 
     })
